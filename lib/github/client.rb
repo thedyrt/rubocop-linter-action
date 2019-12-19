@@ -11,12 +11,14 @@ module Github
 
     def patch(url, body = {})
       request_http do |http|
+        puts body.to_json
         http.patch(url, body.to_json, headers)
       end
     end
 
     def post(url, body = {})
       request_http do |http|
+        puts body.to_json
         http.post(url, body.to_json, headers)
       end
     end
