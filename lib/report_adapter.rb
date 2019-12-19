@@ -21,7 +21,7 @@ class ReportAdapter
       "#{total_offenses(report)} offense(s) found."
     end
 
-    def annotations(report) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength
+    def annotations(report) # rubocop:disable Metrics/AbcSize, Metrics/MethodLength, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
       annotation_list = []
       count = 0
       report['files'].each do |file|
